@@ -1,5 +1,5 @@
 /**
- *    Copyright 2009-2018 the original author or authors.
+ *    Copyright 2009-2020 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -15,9 +15,9 @@
  */
 package org.apache.ibatis.autoconstructor;
 
-import org.apache.ibatis.annotations.Select;
-
 import java.util.List;
+
+import org.apache.ibatis.annotations.Select;
 
 public interface AutoConstructorMapper {
   @Select("SELECT * FROM subject WHERE id = #{id}")
@@ -50,5 +50,5 @@ public interface AutoConstructorMapper {
    *  这是个复杂对象，基本涵盖了各种类型的数据
    */
   @Select("SELECT * FROM extensive_subject")
-  List<ExtensiveSubject> getExtensiveSubject();
+  List<ExtensiveSubject> getExtensiveSubjects();
 }
